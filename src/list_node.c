@@ -25,7 +25,7 @@ list_node_new(int x) {
 
 void
 list_node_deinit(struct list_node *node) {
-    node->next = NULL;
+    list_node_destroy(node->next);
 }
 
 void
