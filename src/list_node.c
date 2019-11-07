@@ -1,4 +1,4 @@
-#include <linked_list.h>
+#include <list_node.h>
 
 #include <stdlib.h>
 
@@ -17,15 +17,14 @@ list_node_new(int x) {
         return node;
     }
 
-    node->x = x;
-    node->next = NULL;
-
-    return node;
+    return list_node_init(node, x);
 }
 
 void
 list_node_deinit(struct list_node *node) {
-    list_node_destroy(node->next);
+    if (node->next) {
+        list_node_destroy(node->next);
+    }
 }
 
 void
