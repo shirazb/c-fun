@@ -6,3 +6,7 @@ void test_list_node_blank(void) {
 
     list_node_destroy(node);
 }
+
+int main(void) {
+    test_list_node_blank();
+}
