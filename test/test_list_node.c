@@ -21,7 +21,7 @@ do { \
 } while(0)
 
 int main(void) {
-    // Must have already generated list node for that type at top level.
+    // Must have already generated list node for that type at top-level.
     test_list_node_can_call_new_and_destroy(int, 5, 10, NULL);
     test_list_node_can_call_new_and_destroy(string, "hello", "why hello there", NULL);
     test_list_node_can_call_new_and_destroy(float, 2.0e4, -3.0f, NULL);
