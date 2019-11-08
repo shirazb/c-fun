@@ -48,7 +48,8 @@ struct list_node(TYPE) { \
 }; \
 \
 /* Prototypes */ \
-typedef void(* list_node_elem_destroyer(TYPE))(TYPE *); \
+/* list_node_elem_destroyer(TYPE) returns void, takes TYPE* */ \
+typedef void(*list_node_elem_destroyer(TYPE))(TYPE *); \
 \
 struct list_node(TYPE) * \
 list_node_init(TYPE)(struct list_node(TYPE) *node, TYPE elem); \
