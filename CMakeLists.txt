@@ -20,12 +20,12 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     include(CTest)
 endif()
 
-message(STATUS "Building list_node library")
+message(STATUS "Configuring sources")
 add_subdirectory(src)
 
 # Testing only available if this is the main app
 # Emergency override variable C_FUN_BUILD_TESTING provided as well
 if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR C_FUN_BUILD_TESTING) AND BUILD_TESTING)
-    message(STATUS "Building tests")
+    message(STATUS "Configuring tests")
     add_subdirectory(test)
 endif()
